@@ -1,0 +1,9 @@
+development:
+  database: <%= app_name %>-development
+
+test:
+  database: <%= app_name %>-test
+
+production:
+  database: <%= app_name %>-production
+

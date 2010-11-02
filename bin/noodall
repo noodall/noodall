@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby -*-
+require 'noodall/generator'
+
+ARGV << "--help" if ARGV.empty?
+
+Noodall::AppGenerator.start
+
