@@ -7,3 +7,5 @@ test:
 production:
   database: <%= app_name %>-production
 
+staging:
+  database: <%= app_name %>-staging
