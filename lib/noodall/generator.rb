@@ -13,15 +13,12 @@ module Noodall
     end
 
     def javascripts
-      get "http://github.com/rails/jquery-ujs/raw/master/src/rails.js", "public/javascripts/rails.js"
+      copy_file "public/javascripts/application.js"
     end
 
     def test
-#      say("Installing rspec from generator", :yellow)
-#      invoke Rspec::Generators::InstallGenerator
-
-#      say("Installing cucumber from generator", :yellow)
-#      generate('cucumber:install')
+      directory 'features'
+      directory 'spec'
     end
 
   end

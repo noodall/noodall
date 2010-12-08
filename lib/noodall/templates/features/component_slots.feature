@@ -12,9 +12,4 @@ Feature: Component Slots
     Examples:
       | Template Name       | Hero Slots Per Page | Wide Slots Per Page | Small Slots Per Page |
       | home                | 0                   | 0                   | 4                    |
-      | sports landing page | 0                   | 3                   | 6                    |
-      | sport page          | 1                   | 3                   | 6                    |
-      | landing page        | 1                   | 0                   | 8                    |
-      | content page        | 1                   | 3                   | 6                    |
-      | event page          | 1                   | 3                   | 6                    |
 

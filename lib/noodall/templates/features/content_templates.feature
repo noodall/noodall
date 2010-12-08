@@ -16,10 +16,7 @@ Feature: Content Templates
 
     Examples:
       | Parent Template Name | Allowed Templates                             |
-      | Home                 | Landing Page                                  |
-      | Landing Page         | Sports Landing Page, Content Page, Event Page |
-      | Sports Landing Page  | Sport Page, Content Page, Event Page          |
-      | Content Page         | Content Page, Event Page                      |
-      | Sport Page           | Content Page, Event Page, Sport Page          |
-      | Event Page           | Content Page                                  |
+      | Home                 | Content Page                                  |
+     #| Content Page         | Content Page, Event Page                      |
+     #| Event Page           | Content Page                                  |
 

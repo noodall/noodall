@@ -6,4 +6,4 @@
 end
 
 require 'noodall/routes'
-Noodall::Routes.draw <%= app_const %>::Application
+Noodall::Routes.draw <%= app_const %>
