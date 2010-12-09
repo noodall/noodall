@@ -36,6 +36,7 @@ When /^(?:|I )press "([^"]*)" within the component$/ do |button|
   within "#fancybox-inner" do
     click_button(button)
   end
+  sleep 1
 end
 
 When /^(?:|I )select an image from the asset library$/ do
