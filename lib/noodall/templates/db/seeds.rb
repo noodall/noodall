@@ -7,4 +7,4 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 #
 User.create!(:name => "Mr Admin", :email => "hello@wearebeef.co.uk", :password => "passw0rd", :password_confirmation => "passw0rd", :groups => ['admin'])
-Home.create!(:title => "Home", :publish => true)
+Home.create!(:title => "Home", :publish => true, :body => "Welcome")
