@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
-gem 'noodall-ui', :path => "~/Gems/noodall-ui"
-gem 'noodall-devise', :path => "~/Gems/noodall-devise"
+gem 'rails', '3.0.3'
+gem 'noodall-ui'
+gem 'noodall-devise'
 gem 'bson_ext', '~> 1.0.9'
 gem 'rmagick', :require => 'RMagick'
 gem 'dragonfly', '~> 0.7.6'
