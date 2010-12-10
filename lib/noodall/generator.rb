@@ -19,6 +19,7 @@ module Noodall
     def test
       directory 'features'
       directory 'spec'
+      copy_file "config/cucumber.yml"
     end
 
   end
