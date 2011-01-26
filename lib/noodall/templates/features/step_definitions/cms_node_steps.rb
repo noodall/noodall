@@ -18,7 +18,11 @@ When /^I am editing the (.*)$/ do |model|
 end
 
 Then /^I should be able to place components in (\d+) (.*) slots$/ do |number, slot_type|
-  page.should have_css("#slot-list .#{slot_type}-slot", :count => number.to_i)
+  if number.to_i == 0
+    page.should_not have_css("#slot-list .#{slot_type}-slot")
+  else
+    page.should have_css("#slot-list .#{slot_type}-slot", :count => number.to_i)
+  end
 end
 
 When /^I create a new root$/ do
@@ -30,8 +34,7 @@ When /^I create a new child under a (.*)$/ do |template_title|
   #create the ancester
   parent = Factory(template.to_sym)
 
-  visit noodall_admin_node_nodes_path(parent)
-  click_link 'New'
+  visit new_noodall_admin_node_node_path(parent)
 end
 
 
@@ -42,8 +45,12 @@ Then /^I should be able select a template from the following:$/ do |table|
 end
 
 Then /^I should be able select a template from "([^\"]*)"$/ do |templates|
-  templates.split(',').map(&:strip).each do |template|
-    choose(template)
+  if templates == 'none'
+    page.should_not have_css('.template input')
+  else
+    templates.split(',').map(&:strip).each do |template|
+      choose(template)
+    end
   end
 end
 
@@ -82,3 +89,13 @@ Given /^each child has (\d+) children$/ do |count|
     end
   end
 end
+
+Given /^the (.*) titled "([^"]*)" has the following children:$/ do |template, title, table|
+  @_content = dehumanize(template).find_by_title(title)
+  table.map_headers! {|header| header.parameterize('_').to_sym }
+  table.hashes.each do |attributes|
+    factory_type = attributes.delete(:type).parameterize('_')
+    Factory(factory_type, attributes.merge(:parent => @_content, :publish => true))
+  end
+end
+
