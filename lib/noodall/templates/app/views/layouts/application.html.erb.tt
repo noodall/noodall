@@ -11,6 +11,11 @@
   <%%= csrf_meta_tag %>
 </head>
 <body>
+  <%%= form_tag(noodall_search_path, :method => :get, :class => 'search') do %>
+    <%%= text_field_tag :q, params[:q] || 'Enter keyword(s) here'  %>
+    <%%= submit_tag 'Search' %>
+  <%% end %>
+
   <%%= flash_messages %>
 
   <%%= yield %>

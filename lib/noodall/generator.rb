@@ -22,6 +22,16 @@ module Noodall
       copy_file "config/cucumber.yml"
     end
 
+    def lib
+      super
+      copy_file "lib/tasks/populate.rake"
+    end
+
+    def config
+      super
+      copy_file "config/sitemap.yml"
+    end
+
   end
 
   class AppGenerator < Rails::Generators::AppGenerator

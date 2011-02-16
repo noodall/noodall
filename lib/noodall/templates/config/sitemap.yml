@@ -1,0 +1,24 @@
+home:
+  title: Welcome
+  type: Home
+#about:
+#  title: About Us
+#  type: ContentPage
+# children:
+#    1st Service:
+#      type: content_page
+#    2nd Service:
+#      type: content_page
+#      children:
+#        Subber:
+#          type: content_page
+#contact-us:
+#  title: Contact Us
+#  type: ContentPage
+#privacy-policy:
+#  title: Privacy Policy
+#  type: ContentPage
+#terms-conditions:
+#  title: Terms Conditions
+#  type: ContentPage
+
