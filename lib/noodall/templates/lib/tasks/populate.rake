@@ -1,7 +1,7 @@
 namespace :db do
 
   task :seed => :environment do
-    require 'db/seeds'
+    require "#{Rails.root}/db/seeds"
   end
 
   task :populate => :seed do

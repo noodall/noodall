@@ -8,4 +8,4 @@
 #
 Noodall::Node.create_indexes!
 Noodall::Site.build!
-User.create(:name => "Mr Admin", :email => "hello@wearebeef.co.uk", :password => "passw0rd", :password_confirmation => "passw0rd", :groups => ['admin'])
+User.create(:name => "Mr Admin", :email => "hello@wearebeef.co.uk", :password => "passw0rd", :password_confirmation => "passw0rd", :groups => ['admin'], :permalink => "admin")

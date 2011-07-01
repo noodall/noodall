@@ -1,8 +1,5 @@
 require 'rails/generators'
 require 'rails/generators/rails/app/app_generator'
-require 'generators/rspec/install/install_generator'
-require 'generators/devise/install_generator'
-require 'generators/cucumber/install/install_generator'
 
 module Noodall
 
@@ -19,7 +16,6 @@ module Noodall
     def test
       directory 'features'
       directory 'spec'
-      copy_file "config/cucumber.yml"
     end
 
     def lib
