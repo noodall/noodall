@@ -23,5 +23,11 @@
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  # Remove Cache-Control header so app does not cache anything
+  config.middleware.insert_before ActionDispatch::Static, Rack::ResponseHeaders do |headers|
+    headers.delete('Last-Modified')
+    headers['Cache-Control'] = "private, max-age=0"
+  end
 end
 
