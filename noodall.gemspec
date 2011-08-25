@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.name        = "noodall"
   s.version     = Noodall::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = []
-  s.email       = []
+  s.authors     = ['Steve England', 'Beef']
+  s.email       = ['noodall@wearebeef.co.uk']
   s.homepage    = "http://rubygems.org/gems/noodall"
   s.summary     = "Noodall meta-gem that depends on the other components"
   s.description = "Noodall meta-gem that depends on the other components. UI and Core data objects."
