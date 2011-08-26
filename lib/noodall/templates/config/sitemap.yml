@@ -1,4 +1,5 @@
 home:
+  name: Home
   title: Welcome
   type: Home
 #about:

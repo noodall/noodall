@@ -1,20 +1,16 @@
 source 'http://rubygems.org'
 source 'http://gems.github.com'
 
-gem 'rails', '3.0.3'
-gem 'mm-multi-parameter-attributes', :git => 'git://github.com/kernow/mm-multi-parameter-attributes.git'
-gem 'noodall-ui', '~> 0.1.9'
+gem 'rails', '> 3.0'
+gem 'noodall-ui'
 gem 'noodall-devise'
-gem 'bson_ext', '~> 1.2.0'
-gem 'rmagick', :require => 'RMagick'
-gem 'dragonfly', '~> 0.8.1'
-gem 'factory_girl_rails'
-gem 'fakerama'
+gem 'bson_ext'
+gem 'dragonfly'
+gem 'rack-contrib', :require => 'rack/contrib'
 
 group :production, :staging do
   gem 'dalli'
   gem 'rack-cache', '~> 1.0.0', :require => 'rack/cache'
-  gem 'rack-contrib', :require => 'rack/contrib'
 end
 
 group :development, :test do
@@ -22,10 +18,10 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'cucumber-rails'
   gem 'cucumber'
-  gem 'rspec-rails', "~> 2.0.0"
+  gem 'rspec-rails'
   gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
   gem 'factory_girl_rails'
-  gem "haml"
+  gem 'fakerama'
 end
 

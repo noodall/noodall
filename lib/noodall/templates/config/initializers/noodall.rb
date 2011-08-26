@@ -1,6 +1,3 @@
-# Use Noodall's default dragonfly setup for assets
-require 'noodall/dragonfly'
-
 # Set the slots that are avaiable to put components in
 Noodall::Node.slots :main, :large, :small
 
