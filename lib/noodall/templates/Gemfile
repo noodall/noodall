@@ -6,11 +6,11 @@ gem 'noodall-ui'
 gem 'noodall-devise'
 gem 'bson_ext'
 gem 'dragonfly'
+gem 'rack-contrib', :require => 'rack/contrib'
 
 group :production, :staging do
   gem 'dalli'
   gem 'rack-cache', '~> 1.0.0', :require => 'rack/cache'
-  gem 'rack-contrib', :require => 'rack/contrib'
 end
 
 group :development, :test do
