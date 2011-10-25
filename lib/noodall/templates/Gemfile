@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 source 'http://gems.github.com'
 
-gem 'rails', '> 3.0'
+gem 'rails', '~> 3.1.0'
 gem 'noodall-ui'
 gem 'noodall-devise'
 gem 'bson_ext'
@@ -10,8 +10,10 @@ gem 'rack-contrib', :require => 'rack/contrib'
 
 group :production, :staging do
   gem 'dalli'
-  gem 'rack-cache', '~> 1.0.0', :require => 'rack/cache'
 end
+
+<%= assets_gemfile_entry %>
+<%= javascript_gemfile_entry %>
 
 group :development, :test do
   gem 'capybara'
@@ -24,4 +26,3 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'fakerama'
 end
-
