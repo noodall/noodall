@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.description = "Noodall meta-gem that depends on the other components. UI and Core data objects."
 
   s.required_rubygems_version = ">= 1.3.6"
-  s.add_dependency 'rails', ">= 3.0.1"
+  s.add_dependency 'rails', "~> 3.1.1"
   s.add_dependency 'noodall-core', ">= 0"
   s.add_dependency 'noodall-ui', ">= 0"
 
