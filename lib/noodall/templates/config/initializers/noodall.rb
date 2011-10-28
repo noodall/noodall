@@ -1,8 +1,8 @@
-# Set the slots that are avaiable to put components in
-Noodall::Node.slots :main, :large, :small
-
-# Set the mongo collection name for nodes
-Noodall::Node.set_collection_name 'nodes'
+# Set the slots and which can be placed in them
+#Noodall::Node.slot :large, GeneralContent
 
 # Reset global update time on startup
 Noodall::GlobalUpdateTime::Stamp.update!
+
+# Set the Root template classes
+#Noodall::Node.root_templates ArticleList

@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
 source 'http://gems.github.com'
 
-gem 'rails', '> 3.0'
-gem 'noodall-ui'
+gem 'rails', '~> 3.1.0'
+gem 'mm-versionable', '0.2.5'
+gem 'noodall-ui', '~> 0.5.0'
 gem 'noodall-devise'
 gem 'bson_ext'
 gem 'dragonfly'
@@ -10,8 +11,10 @@ gem 'rack-contrib', :require => 'rack/contrib'
 
 group :production, :staging do
   gem 'dalli'
-  gem 'rack-cache', '~> 1.0.0', :require => 'rack/cache'
 end
+
+<%= assets_gemfile_entry %>
+<%= javascript_gemfile_entry %>
 
 group :development, :test do
   gem 'capybara'
@@ -19,9 +22,7 @@ group :development, :test do
   gem 'cucumber-rails'
   gem 'cucumber'
   gem 'rspec-rails'
-  gem 'spork'
   gem 'launchy'    # So you can do Then show me the page
   gem 'factory_girl_rails'
   gem 'fakerama'
 end
-
