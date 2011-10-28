@@ -4,7 +4,5 @@
 # Reset global update time on startup
 Noodall::GlobalUpdateTime::Stamp.update!
 
-## Set the Root template classes
-#<%= app_const %>.config.before_eager_load do
-  #Noodall::Node.root_templates ArticleList
-#end
+# Set the Root template classes
+#Noodall::Node.root_templates ArticleList
